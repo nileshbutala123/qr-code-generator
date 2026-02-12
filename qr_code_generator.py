@@ -90,7 +90,7 @@ class QRCodeGenerator:
                 'folder': qr_subfolder,
                 'message': f'QR code generated successfully for URL: {url}'
             }
-            print(f"✓ QR code saved to: {output_file}")
+            print(f"[OK] QR code saved to: {output_file}")
             print(f"  Folder: {qr_subfolder}")
             return result
 
@@ -134,7 +134,7 @@ class QRCodeGenerator:
                 if folder_creation_time < cutoff_time:
                     shutil.rmtree(folder_path)
                     deleted_count += 1
-                    print(f"✓ Deleted old QR code folder: {folder_name}")
+                    print(f"[OK] Deleted old QR code folder: {folder_name}")
 
             return {
                 'success': True,
@@ -146,6 +146,29 @@ class QRCodeGenerator:
             return {
                 'success': False,
                 'deleted_count': 0,
+                'message': f'Error during cleanup: {str(e)}'
+            }
+
+
+
+
+if __name__ == "__main__":
+    # Example usage
+    generator = QRCodeGenerator()
+
+    # Generate a QR code
+    result = generator.generate("https://nfl.com")
+    print(result['message'])
+
+    if result['success']:
+        print(f"QR Code Path: {result['path']}")
+        print(f"Folder: {result['folder']}")
+
+    # Manual cleanup (optional - cleanup is already called during generation)
+    cleanup_result = generator.cleanup_old_qrcodes(days=1)
+    print(cleanup_result['message'])
+
+
                 'message': f'Error during cleanup: {str(e)}'
             }
 
