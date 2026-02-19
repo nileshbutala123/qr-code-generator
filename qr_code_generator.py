@@ -168,26 +168,3 @@ if __name__ == "__main__":
     cleanup_result = generator.cleanup_old_qrcodes(days=1)
     print(cleanup_result['message'])
 
-
-                'message': f'Error during cleanup: {str(e)}'
-            }
-
-
-
-
-if __name__ == "__main__":
-    # Example usage
-    generator = QRCodeGenerator()
-
-    # Generate a QR code
-    result = generator.generate("https://example.com")
-    print(result['message'])
-
-    if result['success']:
-        print(f"QR Code Path: {result['path']}")
-        print(f"Folder: {result['folder']}")
-
-    # Manual cleanup (optional - cleanup is already called during generation)
-    cleanup_result = generator.cleanup_old_qrcodes(days=1)
-    print(cleanup_result['message'])
-
