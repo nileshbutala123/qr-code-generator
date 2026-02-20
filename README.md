@@ -11,7 +11,7 @@ GitHub repo: [https://github.com/nileshbutala123/qr-code-generator](https://gith
 ## Features
 
 - Generate QR codes for any URL
-- Each QR code stored in a **unique subfolder** with metadata
+- Each QR code is stored in a **unique subfolder** with metadata
 - Metadata includes: creation timestamp, expiration date, original URL
 - Automatic **cleanup of old QR codes**
 - Works locally and on cloud deployments
@@ -57,89 +57,61 @@ GitHub repo: [https://github.com/nileshbutala123/qr-code-generator](https://gith
 
 
 Installation & Local Setup
+  1. Clone the repository:
+      > git clone https://github.com/nileshbutala123/qr-code-generator.git
+      > cd qr-code-generator
 
-Clone the repository:
+2. Install dependencies:
+    > pip install -r requirements.txt
 
-git clone https://github.com/nileshbutala123/qr-code-generator.git
-cd qr-code-generator
+3. Open the project in VS Code with recommended Python extensions.
 
+4. Run the FastAPI app locally:
+    > uvicorn app:app --reload
 
-Install dependencies:
+5. Access locally via:
 
-pip install -r requirements.txt
-
-
-Open the project in VS Code with recommended Python extensions.
-
-Run the FastAPI app locally:
-
-uvicorn app:app --reload
-
-
-Access locally via:
-
-API: http://127.0.0.1:8000
-
-Interactive Swagger UI: http://127.0.0.1:8000/docs
+    > API: http://127.0.0.1:8000
+    > Interactive Swagger UI: http://127.0.0.1:8000/docs
 
 Usage
-Python API
-from qrcode_generator import QRCodeGenerator
-
-generator = QRCodeGenerator()
-result = generator.generate("https://example.com")
-print(result['message'])
+    Python API from qrcode_generator import QRCodeGenerator
+      > generator = QRCodeGenerator()
+      > result = generator.generate("https://example.com")
+        > print(result['message'])
 
 FastAPI Web API
+    > POST /api/generate-qr
+      {
+        "url": "https://example.com"
+      }
 
-POST /api/generate-qr
-
-{
-  "url": "https://example.com"
-}
-
-
-GET /api/qr-image?path=<qr_image_path> to retrieve the QR code image
-
-Swagger UI: Visit http://127.0.0.1:8000/docs for interactive API testing
+    > GET /api/qr-image?path=<qr_image_path> to retrieve the QR code image
+    > Swagger UI: Visit http://127.0.0.1:8000/docs for interactive API testing
 
 Deployment
-Render.com
+    => Render.com
+        Deploy as a Python web service
+        Supports automatic rebuilds from GitHub pushes
 
-Deploy as a Python web service
-
-Supports automatic rebuilds from GitHub pushes
-
-AWS ECS / EC2 (Planned)
-
-Dockerize the app for ECS Fargate or EC2
-
-Use S3 for QR code storage and CloudFront for delivery
-
-Auto-scale API requests with ECS or EC2
+    => AWS ECS / EC2 (Planned)
+        Dockerize the app for ECS Fargate or EC2
+        Use S3 for QR code storage and CloudFront for delivery
+        Auto-scale API requests with ECS or EC2
 
 AI-Assisted Development Workflow
+  Entire app built in <2 days using GitHub Copilot Agent Mode
+  “Vibe coding”: AI generates functions, boilerplate, and suggestions while the developer reviews
+  Plan: AI agent will automatically propose PRs for feature updates; the developer only reviews and merges
 
-Entire app built in <2 days using GitHub Copilot Agent Mode
-
-“Vibe coding”: AI generates functions, boilerplate, and suggestions while the developer reviews
-
-Plan: AI agent will automatically propose PRs for feature updates; the developer only reviews and merges
-
-Benefits:
-
-Rapid prototype delivery
-
-Minimal Python knowledge needed
-
-Easy integration with web and cloud platforms
+  Benefits:
+    Rapid prototype delivery
+    Minimal Python knowledge needed
+    Easy integration with web and cloud platforms
 
 Future Enhancements
+  Add QR code analytics (scan count, location, device)
+  Auto-generate QR codes for dynamic URLs
+  Provide Base64 output for frontend embedding
+  Fully automated AI PR agent for continuous enhancements
 
-Add QR code analytics (scan count, location, device)
-
-Auto-generate QR codes for dynamic URLs
-
-Provide Base64 output for frontend embedding
-
-Fully automated AI PR agent for continuous enhancements
