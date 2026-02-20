@@ -115,3 +115,8 @@ Future Enhancements
   Provide Base64 output for frontend embedding
   Fully automated AI PR agent for continuous enhancements
 
+
+Output with screenshots - 
+1. Swagger - https://github.com/nileshbutala123/qr-code-generator/blob/main/QR%20Code%20Generator%20API%20-%20Swagger%20UI.pdf
+2. Form to enter URL - https://github.com/nileshbutala123/qr-code-generator/blob/main/Output%20with%20Form%20to%20enter%20URL%20-%20Screen%201.pdf
+3. https://github.com/nileshbutala123/qr-code-generator/blob/main/Output%20with%20generated%20QR%20Code%20-%20Screen%202.pdf
