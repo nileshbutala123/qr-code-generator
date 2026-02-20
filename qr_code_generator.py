@@ -151,6 +151,7 @@ class QRCodeGenerator:
 
 
 
+        """
 
 if __name__ == "__main__":
     # Example usage
@@ -167,4 +168,6 @@ if __name__ == "__main__":
     # Manual cleanup (optional - cleanup is already called during generation)
     cleanup_result = generator.cleanup_old_qrcodes(days=1)
     print(cleanup_result['message'])
+        """
+
 
