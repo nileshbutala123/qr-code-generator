@@ -1,0 +1,4 @@
+url: https://www.google.com
+created: 2026-02-21T18:10:54.233487
+expires: 2026-02-22T18:10:54.233668
+filename: qrcode.png
