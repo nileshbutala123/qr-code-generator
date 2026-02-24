@@ -121,3 +121,12 @@ Output with screenshots -
 2. Form to enter URL - https://github.com/nileshbutala123/qr-code-generator/blob/main/Output%20with%20Form%20to%20enter%20URL%20-%20Screen%201.pdf
 3. Generated QR Code - https://github.com/nileshbutala123/qr-code-generator/blob/main/Output%20with%20generated%20QR%20Code%20-%20Screen%202.pdf
 
+
+About the Author: Nilesh Butala is an Engineering Leader specializing in Developer Productivity, Platform Engineering, Application Development, Project / Program Management, and Digital Transformation.
+
+LinkedIn profile – https://www.linkedin.com/in/nilesh-butala-6320279/
+
+Blog – https://techtrends8.wordpress.com/
+
+GitHub – https://github.com/nileshbutala123
+
