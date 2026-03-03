@@ -4,3 +4,9 @@ python-multipart>=0.0.6
 qrcode[pil]>=7.3
 Pillow>=8.0
 pydantic>=2.0
+
+# AI Agent dependencies
+openpyxl>=3.10.0
+gitpython>=3.1.27
+PyGithub>=1.55
+anthropic>=0.25.0

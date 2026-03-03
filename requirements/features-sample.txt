@@ -1,0 +1,22 @@
+# Sample Requirements for AI Agent
+# Format: Feature name | Description | Priority (High/Medium/Low)
+
+User Authentication | Implement user login with JWT tokens and session management | High
+
+Database Integration | Store generated QR codes and metadata in PostgreSQL database | High
+
+Analytics Dashboard | Display usage statistics, trends, and performance metrics | Medium
+
+API Rate Limiting | Prevent abuse with rate limiting per IP address and user | Medium
+
+Export Features | Allow exporting QR codes as SVG, PDF, and PNG formats | Medium
+
+Batch Generation | Generate multiple QR codes in a single request | Low
+
+Custom Branding | Allow embedding company logo in the center of QR codes | Low
+
+QR Code Styling | Support custom colors and patterns for QR codes | Low
+
+API Documentation | Auto-generate OpenAPI documentation with examples | Medium
+
+Email Notifications | Send QR code via email when requested | Low

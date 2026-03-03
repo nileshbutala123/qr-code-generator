@@ -1,0 +1,6 @@
+# Sample Requirements for AI Agent
+# Format: Feature name | Description | Priority (High/Medium/Low)
+
+Add text box | to take email from user | High
+
+Email Notifications | Send QR code via email when requested | Low
